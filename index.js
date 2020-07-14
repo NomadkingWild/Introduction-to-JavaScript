@@ -35,10 +35,10 @@ console.log(multiply(4, 6));
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
 const num2 =7;
-function multiply(num1, num2){
-    return num1*num2 +" is my age in dog years";
+function times(num1, num2){
+    return  num1*num2+" is my age in dog years";
 }
-console.log(multiply(1,7));
+console.log(times(1,7));
 
 
 
@@ -200,7 +200,27 @@ console.log(annoyingSong());
 //60s should be D 
 //and anything below 60 should be F
   
+function getGrade(percent) {
+    if (percent >= 90) {
+        return 'A';
+    }
+    if (percent >= 80) {
+        return 'B';
+    }
+    if (percent >= 70) {
+        return 'C';
+    }
+    if (percent >= 60) {
+        return 'D';
+    }
+    return 'F';
+}
 
+console.log(getGrade(90)); // A
+console.log(getGrade(81)); // B
+console.log(getGrade(72)); // C
+console.log(getGrade(63)); // D
+console.log(getGrade(54)); // F
   
   
 
