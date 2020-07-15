@@ -78,7 +78,7 @@ function feedDog(age,weight){
     return percentOf(5,age);
  }
 if(yearsToMonths(age) <= 12){
-    return percentOf(4,age);
+    return percentOf(4,age);z
 }
 }
 console.log(feedDog(15,1));
@@ -107,7 +107,9 @@ console.log(feedDog(15,1));
 // it should return you won or you lost based on the rules of the game (you may need to look up the rules if you have not played before)
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
-let userChoice = prompt("Do you choose Jan, Ken or Pon?");
+//let userChoice = prompt("Do you choose Jan, Ken or Pon?");
+function user(userChoice){
+
 let computerChoice = Math.random();
 if (computerChoice <0.34){
     computerChoice = "jan";
@@ -117,28 +119,28 @@ if (computerChoice <0.34){
 else{
     computerChoice = "pon";
 }
-let compare = function(choice1,choice2){
-    if(choice1 === choice2){
+
+    if(userChoice === computerChoice){
         return "Tie Match!";
     }
-    if(choice1==="jan"){
-        if(choice2==="pon"){
+    if(userChoice === "jan"){
+        if(computerChoice ==="pon"){
             return "jan wins";
         }
         else{
             return "ken wins";
         }
     }
-    if(choice1==="ken"){
-        if(choice2==="jan"){
+    if(userChoice === "ken"){
+        if(computerChoice === "jan"){
             return "ken wins";
         }
         else{
             return "pon wins";
         }
     }
-    if(choice1==="pon"){
-        if(choice2==="jan"){
+    if(userChoice === "pon"){
+        if(computerChoice === "jan"){
             return "jan wins";
         }
         else{
@@ -146,7 +148,7 @@ let compare = function(choice1,choice2){
         }
     }
 }
-console.log((userChoice,computerChoice));
+console.log(user("jan"));
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
